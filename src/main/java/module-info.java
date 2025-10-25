@@ -10,9 +10,14 @@ module ui.medcontrol {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.desktop;
+    requires javafx.graphics;
 
-    opens ui.medcontrol to javafx.fxml;
-    exports ui.medcontrol;
+    opens ui.medcontrol.Login to javafx.fxml;
+    exports ui.medcontrol.Login;
     exports ui;
     opens ui to javafx.fxml;
+    exports ui.medcontrol.Patient;
+    opens ui.medcontrol.Patient to javafx.fxml;
+
 }
